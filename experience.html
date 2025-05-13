@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experience</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 10px;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #00aaff;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .timeline-entry {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+    }
+
+    .timeline-entry::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: -8px;
+      background-color: #00aaff;
+      border-radius: 50%;
+      top: 15px;
+      z-index: 1;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .right::after {
+      left: -8px;
+    }
+
+    .timeline-entry .card {
+      padding: 20px;
+      background: #1c1c1c;
+      color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+    }
+
+    .timeline-entry h3 {
+      margin-top: 0;
+      color: #00aaff;
+    }
+
+    .timeline-entry p {
+      margin: 5px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+
+      .timeline-entry {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .timeline-entry::after {
+        left: 18px;
+      }
+
+      .right {
+        left: 0%;
+      }
+    }
+
+    .navbar {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+    }
+
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ff4444;
+    }
+
+    .navbar nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    .navbar nav a.active,
+    .navbar nav a:hover {
+      color: #00aaff;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Speranza Deejoe</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="services.html">Skills&Services</a>
+      <a href="experience.html" class="active">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="timeline">
+    <div class="timeline-entry left">
+      <div class="card">
+        <h3>Zenanvibe</h3>
+        <p><strong>DEC 2024 – PRESENT</strong></p>
+        <p>Tech Advisor and Trainer</p>
+      </div>
+    </div>
+
+    <div class="timeline-entry right">
+      <div class="card">
+        <h3>CSIR-Central Leather Research Institute</h3>
+        <p><strong>SEPTEMBER 2024-December 2024</strong></p>
+        <p>Research Intern – Supply Chains</p>
+      </div>
+    </div>
+
+    <div class="timeline-entry left">
+      <div class="card">
+        <h3>Gavs Technologies</h3>
+        <p><strong>AUG 2024 - SEPT 2024</strong></p>
+        <p>SQL Developer</p>
+      </div>
+    </div>
+
+    <div class="timeline-entry right">
+      <div class="card">
+        <h3>National Institute of Science and Technology</h3>
+        <p><strong>APR 2024 – SEPT 2024</strong></p>
+        <p>Research Intern</p>
+      </div>
+    </div>
+
+    <div class="timeline-entry left">
+      <div class="card">
+        <h3>Archimedes Digital</h3>
+        <p><strong>DEC 2023 - JAN 2023</strong></p>
+        <p>Worked in Generative AI, developed an interactive chatbot</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1117;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #161b22;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .navbar nav a {
+            color: #c9d1d9;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .navbar nav a.active {
+            color: #58a6ff;
+        }
+
+        .navbar .lang-btn {
+            background: none;
+            border: none;
+            color: #c9d1d9;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .page-content {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative; /* Ensure content is above the background */
+            z-index: 1;
+        }
+
+        .page-content h1 {
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .card {
+            background-color: #161b22;
+            border-radius: 10px;
+            width: 300px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #c9d1d9;
+            margin-bottom: 15px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background-color: #238636;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 0.75em;
+        }
+
+        .card-footer {
+            border-top: 1px solid #30363d;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .card-footer a {
+            text-decoration: none;
+            color: #58a6ff;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .projects-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .animated-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .animated-background i {
+            position: absolute;
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.05);
+            animation: float 20s linear infinite;
+            top: 100%;
+            left: calc(100% * var(--random-left));
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-120vh); }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-background">
+        <i style="--random-left: 0.1;"><i class="fab fa-html5"></i></i>
+        <i style="--random-left: 0.2;"><i class="fab fa-css3-alt"></i></i>
+        <i style="--random-left: 0.3;"><i class="fab fa-js-square"></i></i>
+        <i style="--random-left: 0.4;"><i class="fab fa-react"></i></i>
+        <i style="--random-left: 0.5;"><i class="fab fa-node-js"></i></i>
+        <i style="--random-left: 0.6;"><i class="fab fa-python"></i></i>
+        <i style="--random-left: 0.7;"><i class="fas fa-database"></i></i>
+        <i style="--random-left: 0.8;"><i class="fas fa-server"></i></i>
+    </div>
+    <header class="navbar">
+        <div class="logo">Speranza Deejoe</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="services.html">Skills&Services</a>
+            <a href="experience.html">Experience</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="page-content">
+        <h1>Projects</h1>
+
+        <div class="projects-grid">
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>Power-BI-Dashboard-for-student-data</h3>
+                    <p>An automated tool that creates phonics worksheets for kindergarten learners.</p>
+                    <div class="tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Excel</span>
+             
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Power-BI-Dashboard-for-student-data" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>Redwine Quality Multiclass Classification Model</h3>
+                    <p>This project aims to develop a Deep Learning Multiclass Classification Model to predict the quality of red wine based on its physicochemical properties. </p>
+                    <div class="tags">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Tensorflow</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Redwine-Quality-Multiclass-Classification-Model-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>Series-Recommender-using-Machine-Learning-</h3>
+                    <p>Interactive series recommender built using collaborative filtering techniques.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Recommender System</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Series-Recommender-using-Machine-Learning-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>Titanic-Model-</h3>
+                    <p>This project involves predicting the survival of passengers on the Titanic using machine learning models</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">ML</span>
+                        <span class="tag">Scikit-learn</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Titanic-Model-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+         
+          <div class="card">
+                <div class="card-content">
+                    <h3>Heart-disease-Prediction-model</h3>
+                    <p>This project is a binary classification model designed to predict the likelihood of heart disease based on given input features. It is implemented using TensorFlow and Keras, utilizing a simple feedforward neural network.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Deeplearning</span>
+                        <span class="tag">Tensorflow</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Heart-disease-Prediction-model" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+        <div class="card">
+                <div class="card-content">
+                    <h3>Image-Classification-using-CNN</h3>
+                    <p>This project implements an image classification model using Convolutional Neural Networks (CNNs) to classify images into 5 different categories.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Deeplearning</span>
+                        <span class="tag">Tensorflow</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Image-Classification-using-CNN" target="_blank">💻 Code</a>
+                </div>
+            </div>
+       
+      <div class="card">
+                <div class="card-content">
+                    <h3>Churn-analysis-using-machine-learning-</h3>
+                    <p>This project predicts customer churn using machine learning models.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machinelearning</span>
+                        <span class="tag">Scikitlearn</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Churn-analysis-using-machine-learning-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+       
+       <div class="card">
+                <div class="card-content">
+                    <h3>Text-summarizer-using-Machine-Learning--</h3>
+                    <p>A Python-based text summarization tool using SpaCy and NLTK with the TF-IDF algorithm. This tool efficiently condenses lengthy articles into concise summaries.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machinelearning</span>
+                        <span class="tag">Natural language Processing</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Text-summarizer-using-Machine-Learning-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+     
+        <div class="card">
+                 <div class="card-content">
+                    <h3>Student-Performance-Prediction-using-Regression-</h3>
+                    <p>This project predicts student performance using machine learning regression models. </p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machinelearning</span>
+                        <span class="tag">Scikit-learn</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Student-Performance-Prediction-using-Regression-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+     
+      <div class="card">
+                 <div class="card-content">
+                    <h3>MNIST-GAN-TRAINNING-</h3>
+                    <p>The model consists of a generator that generates fake images and a discriminator that classifies images as real or fake. </p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Deeplearning</span>
+                        <span class="tag">Tensorflow</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/MNIST-GAN-TRAINNING-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+     
+     <div class="card">
+                 <div class="card-content">
+                    <h3>K-MEANS-CLUSTERING-FOR-MNIST-DATASET-</h3>
+                    <p>The goal of this project is to explore the application of K-Means clustering to the MNIST dataset and understand how well the resulting clusters align with the actual digit labels </p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machinelearning</span>
+                        <span class="tag">Scikit-Learn</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/K-MEANS-CLUSTERING-FOR-MNIST-DATASET-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+      <div class="card">
+                 <div class="card-content">
+                    <h3>Credit-Card-Fraud-Detection-using-Machine-Learning</h3>
+                    <p>This project uses machine learning techniques to detect fraudulent credit card transactions. </p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machinelearning</span>
+                        <span class="tag">Scikit-Learn</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Credit-Card-Fraud-Detection-using-Machine-Learning" target="_blank">💻 Code</a>
+                </div>
+            </div>
+     
+        <div class="card">
+                 <div class="card-content">
+                    <h3>Credit-Card-Customer-Churn-Analysis-using-Deep-Learning</h3>
+                    <p>This project focuses on predicting whether a customer will churn using a deep learning model.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Deeplearning</span>
+                        <span class="tag">Tensrflow</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Credit-Card-Customer-Churn-Analysis-using-Deep-Learning" target="_blank">💻 Code</a>
+                </div>
+            </div>
+     
+        <div class="card">
+                 <div class="card-content">
+                    <h3>Handwritten-Digit-Classification-Using-ANN</h3>
+                    <p>This project demonstrates how to classify handwritten digits from the MNIST dataset using an Artificial Neural Network.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Deeplearning</span>
+                        <span class="tag">Tensorflow</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Handwritten-Digit-Classification-Using-ANN" target="_blank">💻 Code</a>
+                </div>
+            </div>
+      
+       <div class="card">
+                 <div class="card-content">
+                    <h3>Handwritten-Digit-Classification-Using-ANN</h3>
+                    <p>This project demonstrates how to detect faces and eyes in an image using OpenCV's Haar Cascade Classifiers.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Computervision</span>
+                        <span class="tag">OpenCV</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Face-Eye-Detection-OpenCV" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+      <div class="card">
+                 <div class="card-content">
+                    <h3>Diabetes-prediction-using-Machine-learning-</h3>
+                    <p>This is a web application that predicts whether a person is likely to have diabetes based on several medical parameters. The machine learning model is trained on the Pima Indians Diabetes Dataset.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Full stack development</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Scikit-learn</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://diabetes-prediction-l69e.onrender.com/" target="_blank">💻 Code</a>
+                </div>
+            </div>
+ 
+
+       <div class="card">
+                 <div class="card-content">
+                    <h3>Mudra-detection</h3>
+                    <p>This is a Mudra Detection Web Application built with Flask, where users can upload images of mudras, and the app predicts the mudra using a trained model via Roboflow.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Full stack development</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Roboflow</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://mudrarecognition.onrender.com/" target="_blank">💻 Code</a>
+                </div>
+            </div>
+     
+       <div class="card">
+                 <div class="card-content">
+                    <h3>Iris-Classification-Using-Decision-Tree-and-Random-Forest</h3>
+                    <p>This project implements classification models using Decision Tree and Random Forest on the famous Iris dataset.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-Learn</span>
+                        <span class="tag">Machine Learning</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Iris-Classification-Using-Decision-Tree-and-Random-Forest" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+       
+          <div class="card">
+                <div class="card-content">
+                    <h3>-World-Population-Demographics-Analysis</h3>
+                    <p>This Power BI dashboard presents a comprehensive visualization of global demographic data including rural and urban population, life expectancy, birth and death rates, and income groups.</p>
+                    <div class="tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Excel</span>
+             
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/-World-Population-Demographics-Analysis" target="_blank">💻 Code</a>
+                </div>
+            </div>
+  
+       
+       <div class="card">
+                 <div class="card-content">
+                    <h3>ShopCluster-Segmenting-Mall-Shoppers-using-KMeans</h3>
+                    <p>A machine learning project for segmenting shopping mall customers based on their annual income, spending score, and optionally gender, using KMeans clustering.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-Learn</span>
+                        <span class="tag">Machine Learning</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/ShopCluster-Segmenting-Mall-Shoppers-using-KMeans" target="_blank">💻 Code</a>
+                </div>
+            </div>
+     
+      <div class="card">
+                 <div class="card-content">
+                    <h3>Medical-Cost-Estimator-Using-Regression-</h3>
+                    <p>This project aims to predict medical insurance charges based on demographic and personal health data using three regression models: Linear Regression, Ridge Regression, and Lasso Regression.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-Learn</span>
+                        <span class="tag">Machine Learning</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Medical-Cost-Estimator-Using-Regression-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+    
+      
+          <div class="card">
+                <div class="card-content">
+                    <h3>sales-dashboard-</h3>
+                    <p>This Power BI dashboard provides a comprehensive analysis of sales data across multiple dimensions such as Category, Region, State, and Order Date.</p>
+                    <div class="tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Excel</span>
+             
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/sales-dashboard-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+       
+          <div class="card">
+                 <div class="card-content">
+                    <h3>MiniNovaLearningHub base website</h3>
+                    <p>Created a base Website for a company named MININOVA Learning Hub</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Webdevelopment</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/MiniNovaLearningHub" target="_blank">💻 Code</a>
+                </div>
+            </div>
+  
+
+           <div class="card">
+                 <div class="card-content">
+                    <h3>MiniNovaLearningHub finalised website</h3>
+                    <p>Created the finalised Website for a company named MININOVA Learning Hub.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Javascript</span>
+                        <span class="tag">Webdevelopment</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Mininovalearninghub_website-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+      
+      
+         <div class="card">
+                 <div class="card-content">
+                    <h3>Sample portfolio 1</h3>
+                    <p>This is sample portfolio for a tech enthusiast.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Webdevelopment</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/My-Portfolio" target="_blank">💻 Code</a>
+                </div>
+            </div>
+      
+
+         <div class="card">
+                 <div class="card-content">
+                    <h3>Sample portfolio 2</h3>
+                    <p>This is sample portfolio for a tech enthusiast.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Webdevelopment</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Portfolio" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+      <div class="card">
+                 <div class="card-content">
+                    <h3> Cat vs Dog Image Classifier</h3>
+                    <p>This project implements a Convolutional Neural Network (CNN) using TensorFlow and Keras to classify images into two categories: Cats and Dogs.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tensorflow</span>
+                        <span class="tag">Deep Learning</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/CNN-model-for-Identifying-the-difference-between-dogs-and-cats-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+
+
+      <div class="card">
+                 <div class="card-content">
+                    <h3> Employee Attrition Prediction using Feedforward Neural Network</h3>
+                    <p>This project predicts employee attrition using a deep learning model built with TensorFlow and Keras.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tensorflow</span>
+                        <span class="tag">Deep Learning</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/employee-attrition-prediction-fnn" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+   
+        <div class="card">
+                 <div class="card-content">
+                    <h3> Customer Segmentation using Feedforward Neural Network</h3>
+                    <p>This project applies KMeans clustering to segment mall customers and then uses a Feedforward Neural Network (FNN) to classify customers into their respective segments.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tensorflow</span>
+                        <span class="tag">Deep Learning</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/-Customer-Segmentation-using-FNN-Feedforward-Neural-Network-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+   
+           <div class="card">
+                 <div class="card-content">
+                    <h3> Restaurant Payment System</h3>
+                    <p>The Restaurant Payment System is a GUI-based Python application built using Tkinter.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tkinter</span>
+                        <span class="tag">Fullstack Development</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Restaurant-Management-System-using-Python--" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+
+          <div class="card">
+                 <div class="card-content">
+                    <h3> Task Management System</h3>
+                    <p>The Task Management System is a simple yet effective desktop application built using Tkinter for managing daily tasks.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tkinter</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Fullstack Development</span>
+
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Task-Management-System" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+         <div class="card">
+                 <div class="card-content">
+                    <h3> Billing-System </h3>
+                    <p>A simple billing system built with Tkinter for the graphical user interface and MySQL Workbench for database management.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Tkinter</span>
+                        <span class="tag">Fullstack Development</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Billing-System-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+        
+           <div class="card">
+                 <div class="card-content">
+                    <h3> Attendance-Management-System </h3>
+                    <p>A simple Tkinter-based Attendance Management System integrated with MySQL to add students, mark attendance, and view attendance records.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Tkinter</span>
+                        <span class="tag">Fullstack Development</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Attendance-Management-System-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+        <div class="card">
+                 <div class="card-content">
+                    <h3>Calculator Application </h3>
+                    <p>This is a simple GUI-based calculator application built using Python's Tkinter library.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tkinter</span>
+                        <span class="tag">Fullstack Development</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/calculator-using-python-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+              
+             <div class="card">
+                 <div class="card-content">
+                    <h3>Proactive-Malware-Detection</h3>
+                    <p>This project contains a machine learning pipeline that classifies malware samples based on various features.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">MachineLearning</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Proactive-Malware-Detection-In-Python-Using-Random-Forest-Model" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+          <div class="card">
+                 <div class="card-content">
+                    <h3>Random-forest-model-for-50-startup-dataset</h3>
+                    <p>This project applies Random Forest Regression to predict startup profits based on various features.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">MachineLearning</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Random-forest-model-for-50-startup-dataset-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+
+          <div class="card">
+                 <div class="card-content">
+                    <h3>BBC-News-Text-Classification</h3>
+                    <p>This project implements a text classification model using Natural Language Processing (NLP) and Machine Learning to categorize BBC news articles into different categories.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">MachineLearning</span>
+                         <span class="tag">Natural language processing</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/BBC-News-Text-Classification" target="_blank">💻 Code</a>
+                </div>
+            </div>
+      
+       <div class="card">
+                 <div class="card-content">
+                    <h3>Covid-19-DATA-ANALYSIS</h3>
+                    <p>This project analyzes COVID-19 data using R and the dplyr library.</p>
+                    <div class="tags">
+                        <span class="tag">R programming</span>
+                        <span class="tag">Data analysis</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/Covid-19-DATA-ANALYSIS-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+ 
+   <div class="card">
+                 <div class="card-content">
+                    <h3>House Price Prediction</h3>
+                    <p>This project implements a House Price Prediction Model using a Feedforward Neural Network built with TensorFlow/Keras.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tensorflow</span>
+                        <span class="tag">DeepLearning</span>
+    
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/speranzadeejoe/House-prediction-using-Neural-Networks-" target="_blank">💻 Code</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

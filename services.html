@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skills & Services</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #000; /* black background */
+      color: #fff; /* white text */
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    .page-content {
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #ff6666;
+    }
+
+    .skills-section, .services-section {
+      margin-bottom: 50px;
+    }
+
+    .skill {
+      margin-bottom: 15px;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #ccc;
+    }
+
+    .progress-bar {
+      background-color: #444;
+      border-radius: 25px;
+      overflow: hidden;
+      height: 25px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      text-align: right;
+      padding-right: 10px;
+      color: #fff;
+      font-weight: bold;
+      line-height: 25px;
+    }
+
+    /* Bar colors */
+    .python    { width: 80%; background-color: #4a90e2; }
+    .dl        { width: 65%; background-color: #9b59b6; }
+    .ml        { width: 70%; background-color: #e67e22; }
+    .htmlcss   { width: 90%; background-color: #1abc9c; }
+    .js        { width: 60%; background-color: #f1c40f; color: #000; }
+    .nlp       { width: 60%; background-color: #2ecc71; }
+    .mysql     { width: 85%; background-color: #8e44ad; }
+    .bi        { width: 80%; background-color: #00bcd4; }
+    .tableau   { width: 75%; background-color: #e74c3c; }
+
+    .service-item {
+      margin-bottom: 25px;
+    }
+
+    .service-item h3 {
+      margin: 0 0 8px;
+      color: #ffffff;
+    }
+
+    .service-item p {
+      margin: 0;
+      color: #cccccc;
+    }
+
+    .navbar {
+      background-color: #111;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      color: #ff4d4d;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    nav a:hover {
+      color: #ff6666;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Speranza Deejoe</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="services.html" class="active">Skills&Services</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-content">
+    <div class="skills-section">
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skill"><div class="skill-name">Python</div><div class="progress-bar"><div class="progress-fill python">80%</div></div></div>
+      <div class="skill"><div class="skill-name">Deeplearning</div><div class="progress-bar"><div class="progress-fill dl">65%</div></div></div>
+      <div class="skill"><div class="skill-name">Machine Learning (TensorFlow, PyTorch)</div><div class="progress-bar"><div class="progress-fill ml">70%</div></div></div>
+      <div class="skill"><div class="skill-name">HTML/CSS</div><div class="progress-bar"><div class="progress-fill htmlcss">90%</div></div></div>
+      <div class="skill"><div class="skill-name">JavaScript</div><div class="progress-bar"><div class="progress-fill js">60%</div></div></div>
+      <div class="skill"><div class="skill-name">NLP</div><div class="progress-bar"><div class="progress-fill nlp">60%</div></div></div>
+      <div class="skill"><div class="skill-name">MySQL</div><div class="progress-bar"><div class="progress-fill mysql">85%</div></div></div>
+      <div class="skill"><div class="skill-name">PowerBI&Excel</div><div class="progress-bar"><div class="progress-fill bi">80%</div></div></div>
+      <div class="skill"><div class="skill-name">Tableau</div><div class="progress-bar"><div class="progress-fill tableau">75%</div></div></div>
+    </div>
+
+    <div class="services-section">
+      <h2 class="section-title">What I Can Do</h2>
+
+      <div class="service-item">
+        <h3>Data Analysis & Visualization</h3>
+        <p>Analyze and visualize datasets using Python libraries like Pandas, Matplotlib, and Seaborn.</p>
+      </div>
+
+      <div class="service-item">
+        <h3>Machine Learning Projects</h3>
+        <p>Design and develop predictive models using Scikit-learn, TensorFlow, and PyTorch.</p>
+      </div>
+
+      <div class="service-item">
+        <h3>Web Development</h3>
+        <p>Build responsive web apps using HTML, CSS, JavaScript, and React.</p>
+      </div>
+
+      <div class="service-item">
+        <h3>Database Handling</h3>
+        <p>Work with relational databases and perform CRUD operations using MySQL.</p>
+      </div>
+
+      <div class="service-item">
+        <h3>Cloud & Automation</h3>
+        <p>Deploy ML models using AWS SageMaker and create basic automation tests with Selenium IDE.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1117;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #e0f7fa; /* Light cyan for a sophisticated feel */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: rgba(22, 27, 34, 0.9); /* Slightly transparent navbar */
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #64ffda; /* Teal accent color */
+            letter-spacing: 1.5px;
+        }
+
+        .navbar nav a {
+            color: #a7c957; /* Olive green for a touch of elegance */
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar nav a:hover {
+            color: #f0abfc; /* Lavender for hover effect */
+        }
+
+        .navbar nav a.active {
+            color: #f9f871; /* Pale yellow for the active link */
+        }
+
+        .navbar .lang-btn {
+            background: none;
+            border: none;
+            color: #80cbc4; /* Light teal for the button */
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .navbar .lang-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .page-content {
+            padding: 60px 40px;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: rgba(22, 27, 34, 0.7); /* Slightly transparent content area */
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-content h1 {
+            color: #64ffda;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .about-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #cddafd; /* Soft blue-grey for readability */
+            margin-bottom: 25px;
+        }
+
+        .interests-section {
+            margin-top: 35px;
+        }
+
+        .interests-section h2 {
+            color: #f0abfc;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #64ffda;
+            padding-bottom: 8px;
+        }
+
+        .interests-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .interests-list li {
+            background-color: #2e3440; /* Darker background for interest pills */
+            color: #eceff4; /* Light grey for text */
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            font-weight: 500;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .graduation-info {
+            margin-top: 40px;
+            text-align: center;
+            color: #a7c957;
+            font-style: italic;
+        }
+
+        /* Animated Background Styles */
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none; /* Allows interaction with content above */
+        }
+
+        .animated-background i {
+            position: absolute;
+            font-size: 30px;
+            color: rgba(100, 255, 218, 0.15); /* Teal with low opacity */
+            animation: floating-data 15s linear infinite;
+            top: calc(100% * var(--y-pos));
+            left: calc(100% * var(--x-pos));
+            opacity: 0;
+            animation-delay: calc(-15s * var(--delay));
+        }
+
+        @keyframes floating-data {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-120vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-background">
+        <i class="fas fa-chart-bar" style="--y-pos: 0.1; --x-pos: 0.2; --delay: 0;"></i>
+        <i class="fas fa-database" style="--y-pos: 0.3; --x-pos: 0.8; --delay: 1;"></i>
+        <i class="fas fa-brain" style="--y-pos: 0.5; --x-pos: 0.1; --delay: 2;"></i>
+        <i class="fas fa-code" style="--y-pos: 0.7; --x-pos: 0.6; --delay: 3;"></i>
+        <i class="fas fa-network-wired" style="--y-pos: 0.9; --x-pos: 0.3; --delay: 4;"></i>
+        <i class="fas fa-project-diagram" style="--y-pos: 0.2; --x-pos: 0.9; --delay: 5;"></i>
+        <i class="fas fa-laptop-code" style="--y-pos: 0.4; --x-pos: 0.4; --delay: 6;"></i>
+        <i class="fas fa-file-alt" style="--y-pos: 0.6; --x-pos: 0.7; --delay: 7;"></i>
+        <i class="fas fa-robot" style="--y-pos: 0.8; --x-pos: 0.15; --delay: 8;"></i>
+        <i class="fas fa-language" style="--y-pos: 0.15; --x-pos: 0.5; --delay: 9;"></i>
+        <i class="fas fa-desktop" style="--y-pos: 0.75; --x-pos: 0.85; --delay: 10;"></i>
+        <i class="fas fa-code-branch" style="--y-pos: 0.25; --x-pos: 0.05; --delay: 11;"></i>
+    </div>
+
+    <header class="navbar">
+        <div class="logo">Speranza Deejoe</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Me</a>
+            <a href="services.html">Skills&Services</a>
+            <a href="experience.html">Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            
+        </nav>
+    </header>
+
+    <section class="page-content">
+        <h1>Decoding the Digital Realm</h1>
+        <p class="about-text">
+            Driven by an insatiable curiosity for unraveling patterns and extracting insights from the vast ocean of data, coupled with a passion for crafting seamless digital experiences, I am a recent graduate with a Bachelor's in Computer Science Engineering from SRM University, Chennai (Class of 2021-2025). My academic journey has been a thrilling exploration into the core of computation, igniting a fervent passion for the transformative power of data science, machine learning, deep learning, the nuanced understanding of natural language processing, and the dynamic world of web development, extending to the intricacies of full-stack development.
+        </p>
+
+        <div class="interests-section">
+            <h2>Ventures into Intelligence & Development</h2>
+            <ul class="interests-list">
+                <li><i class="fas fa-chart-bar"></i> Data Science</li>
+                <li><i class="fas fa-brain"></i> Machine Learning</li>
+                <li><i class="fas fa-layers"></i> Deep Learning</li>
+                <li><i class="fas fa-comments"></i> Natural Language Processing</li>
+                <li><i class="fas fa-code"></i> Algorithmic Innovation</li>
+                <li><i class="fas fa-database"></i> Data Wrangling & Visualization</li>
+                <li><i class="fas fa-desktop"></i> Web Development</li>
+                <li><i class="fas fa-code-branch"></i> Full Stack Development</li>
+            </ul>
+        </div>
+
+        <p class="graduation-info">
+            Crafted in the crucible of B.Tech CSE, SRM University, Chennai (2021-2025).
+        </p>
+    </section>
+</body>
+</html>
