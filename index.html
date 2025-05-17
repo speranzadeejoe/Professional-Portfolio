@@ -12,18 +12,17 @@
   <header class="navbar">
     <div class="logo">Speranza Deejoe</div>
     <nav>
-   <a href="index.html">Home</a>
-   <a href="about.html">About Me</a>
-   <a href="services.html">Skills&Services</a>
-   <a href="experience.html">Experience</a>
-   <a href="projects.html">Projects</a>
-   <a href="contact.html">Contact</a>
-   <label class="theme-switch">
-    <input type="checkbox" id="themeToggle" />
-    <span class="slider"></span>
-  </label>
-</nav>
-
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="services.html">Skills&Services</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <label class="theme-switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider"></span>
+      </label>
+    </nav>
   </header>
 
   <section class="hero" id="home">
@@ -34,7 +33,6 @@
       <div class="socials">
         <a href="https://www.linkedin.com/in/speranza-deejoe-a6b467222"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/speranzadeejoe"><i class="fab fa-github"></i></a>
-  
       </div>
     </div>
     <div class="floating-icons">
@@ -45,5 +43,140 @@
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
     </div>
   </section>
+
+  <!-- Chatbot HTML -->
+  <div id="chatbot-container">
+    <div id="chatbot-header">🤖 Chat with Mini</div>
+    <div id="chatbot-messages"></div>
+    <input type="text" id="chatbot-input" placeholder="Type your message..." />
+  </div>
+
+  <button id="chatbot-toggle">💬</button>
+
+  <!-- Chatbot CSS -->
+  <style>
+    #chatbot-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 9999;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    #chatbot-container {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 300px;
+      max-height: 400px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 9999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    #chatbot-header {
+      background: #4a90e2;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #chatbot-messages {
+      flex-grow: 1;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 14px;
+      height: 250px;
+    }
+
+    #chatbot-input {
+      border: none;
+      border-top: 1px solid #ccc;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .user-msg { text-align: right; color: #333; margin-bottom: 5px; }
+    .bot-msg { text-align: left; color: #4a90e2; margin-bottom: 5px; }
+  </style>
+
+  <!-- Chatbot JavaScript -->
+ <script>
+  const toggleBtn = document.getElementById("chatbot-toggle");
+  const chatbot = document.getElementById("chatbot-container");
+  const input = document.getElementById("chatbot-input");
+  const messages = document.getElementById("chatbot-messages");
+
+  toggleBtn.onclick = () => {
+    chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
+    chatbot.style.flexDirection = "column";
+  };
+
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter" && input.value.trim() !== "") {
+      const userText = input.value;
+      addMessage("user", userText);
+      respondTo(userText.toLowerCase());
+      input.value = "";
+    }
+  });
+
+  function addMessage(sender, text) {
+    const msg = document.createElement("div");
+    msg.className = sender === "user" ? "user-msg" : "bot-msg";
+    msg.innerText = text;
+    messages.appendChild(msg);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function respondTo(input) {
+    let response = "Please visit the portfolio for more details, or email speranzadeejoemini@gmail.com for any queries.";
+
+    if (input.includes("hello") || input.includes("hi")) {
+      response = "Hello! How can I help you today?";
+    } else if (input.includes("your name") || input.includes("who are you") || input.includes("you")) {
+      response = "I'm Speranza's friendly chatbot assistant!";
+    } else if (input.includes("projects") || input.includes("project work")) {
+      response = "You can check out Speranza's projects in the Projects section above!";
+    } else if (input.includes("contact") || input.includes("email") || input.includes("reach")) {
+      response = "You can reach Speranza at speranzadeejoemini@gmail.com or via her LinkedIn profile.";
+    } else if (input.includes("skills") || input.includes("services")) {
+      response = "Speranza is skilled in Python, Data Science, Machine Learning, and Fullstack Web Development.";
+    } else if (input.includes("experience") || input.includes("work")) {
+      response = "You can explore Speranza's work experience in the Experience section.";
+    } else if (input.includes("education") || input.includes("degree") || input.includes("qualification")) {
+      response = "Speranza holds a strong academic background in data and computer science. You can find more in the About Me section.";
+    } else if (input.includes("portfolio") || input.includes("website") || input.includes("home")) {
+      response = "You're already on the portfolio site. Use the menu above to explore various sections!";
+    } else if (input.includes("hire") || input.includes("available") || input.includes("job")) {
+      response = "Speranza is open to exciting opportunities! Feel free to connect via email or LinkedIn.";
+    } else if (input.includes("linkedin") || input.includes("github") || input.includes("social")) {
+      response = "Check the top contact section for Speranza’s LinkedIn and GitHub links.";
+    } else if (input.includes("thanks") || input.includes("thank you")) {
+      response = "You're welcome! Let me know if you have more questions.";
+    } else if (input.includes("help") || input.includes("assist")) {
+      response = "Sure! You can ask about projects, skills, experience, contact info, or anything else about Speranza.";
+    }
+
+    setTimeout(() => addMessage("bot", response), 500);
+  }
+</script>
+
 </body>
 </html>
