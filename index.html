@@ -2,59 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Speranza Deejoe | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-<body>
-  <header class="navbar">
-    <div class="logo">Speranza Deejoe</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="services.html">Skills&Services</a>
-      <a href="experience.html">Experience</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <label class="theme-switch">
-        <input type="checkbox" id="themeToggle" />
-        <span class="slider"></span>
-      </label>
-    </nav>
-  </header>
-
-  <section class="hero" id="home">
-    <div class="content">
-      <p>Hello</p>
-      <h1>I Am <span class="highlight">Speranza Deejoe</span></h1>
-      <h2>Data science Enthusiast and Full-Stack Web Developer.</h2>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/speranza-deejoe-a6b467222"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/speranzadeejoe"><i class="fab fa-github"></i></a>
-      </div>
-    </div>
-    <div class="floating-icons">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TS">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
-    </div>
-  </section>
-
-  <!-- Chatbot HTML -->
-  <div id="chatbot-container">
-    <div id="chatbot-header">🤖 Chat with Mini</div>
-    <div id="chatbot-messages"></div>
-    <input type="text" id="chatbot-input" placeholder="Type your message..." />
-  </div>
-
-  <button id="chatbot-toggle">💬</button>
-
-  <!-- Chatbot CSS -->
   <style>
+    /* Chatbot toggle button */
     #chatbot-toggle {
       position: fixed;
       bottom: 20px;
@@ -67,24 +21,25 @@
       height: 60px;
       font-size: 24px;
       cursor: pointer;
-      z-index: 9999;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
+    /* Chatbot container */
     #chatbot-container {
       position: fixed;
       bottom: 90px;
       right: 20px;
       width: 300px;
-      max-height: 400px;
+      max-height: 500px;
       background: white;
       border: 1px solid #ccc;
       border-radius: 12px;
       display: none;
       flex-direction: column;
       overflow: hidden;
-      z-index: 9999;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     #chatbot-header {
@@ -103,80 +58,181 @@
       height: 250px;
     }
 
-    #chatbot-input {
-      border: none;
-      border-top: 1px solid #ccc;
+    #chatbot-options {
       padding: 10px;
-      width: 100%;
-      box-sizing: border-box;
-      font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
     }
 
-    .user-msg { text-align: right; color: #333; margin-bottom: 5px; }
-    .bot-msg { text-align: left; color: #4a90e2; margin-bottom: 5px; }
+   .chat-option {
+  background: #4a90e2; /* brighter background */
+  color: white;         /* high contrast text */
+  border: none;         /* cleaner look */
+  border-radius: 16px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.3s;
+}
+
+.chat-option:hover {
+  background: #357ABD;  /* darker shade on hover */
+}
+
+
+    .chat-option:hover {
+      background: #d0e4ff;
+    }
+
+    .user-msg {
+      text-align: right;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .bot-msg {
+      text-align: left;
+      color: #4a90e2;
+      margin-bottom: 5px;
+    }
   </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">Speranza Deejoe</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="services.html">Skills & Services</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <label class="theme-switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider"></span>
+      </label>
+    </nav>
+  </header>
 
-  <!-- Chatbot JavaScript -->
- <script>
-  const toggleBtn = document.getElementById("chatbot-toggle");
-  const chatbot = document.getElementById("chatbot-container");
-  const input = document.getElementById("chatbot-input");
-  const messages = document.getElementById("chatbot-messages");
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <p>Hello</p>
+      <h1>I Am <span class="highlight">Speranza Deejoe</span></h1>
+      <h2>Data Science Enthusiast and Full-Stack Web Developer.</h2>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/speranza-deejoe-a6b467222"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/speranzadeejoe"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="floating-icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TS">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+    </div>
+  </section>
 
-  toggleBtn.onclick = () => {
-    chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
-    chatbot.style.flexDirection = "column";
-  };
+  <!-- Chatbot -->
+  <div id="chatbot-container">
+    <div id="chatbot-header">🤖 Chat with Mini</div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-options"></div>
+  </div>
+  <button id="chatbot-toggle">💬</button>
 
-  input.addEventListener("keypress", function (e) {
-    if (e.key === "Enter" && input.value.trim() !== "") {
-      const userText = input.value;
-      addMessage("user", userText);
-      respondTo(userText.toLowerCase());
-      input.value = "";
+  <!-- Chatbot Script -->
+  <script>
+    const toggleBtn = document.getElementById("chatbot-toggle");
+    const chatbot = document.getElementById("chatbot-container");
+    const messages = document.getElementById("chatbot-messages");
+    const options = document.getElementById("chatbot-options");
+
+    const questionOptions = [
+      "About Me",
+      "Skills & Services",
+      "Projects",
+      "Experience",
+      "Education",
+      "Contact Info",
+      "LinkedIn & GitHub",
+      "Job Opportunities",
+      "Thanks"
+    ];
+
+    toggleBtn.addEventListener("click", () => {
+      const isOpen = chatbot.style.display === "flex";
+      chatbot.style.display = isOpen ? "none" : "flex";
+      if (!isOpen) {
+        messages.innerHTML = "";
+        showInitialQuestion();
+      }
+    });
+
+    function addMessage(sender, text) {
+      const msg = document.createElement("div");
+      msg.className = sender === "user" ? "user-msg" : "bot-msg";
+      msg.innerText = text;
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
     }
-  });
 
-  function addMessage(sender, text) {
-    const msg = document.createElement("div");
-    msg.className = sender === "user" ? "user-msg" : "bot-msg";
-    msg.innerText = text;
-    messages.appendChild(msg);
-    messages.scrollTop = messages.scrollHeight;
-  }
-
-  function respondTo(input) {
-    let response = "Please visit the portfolio for more details, or email speranzadeejoemini@gmail.com for any queries.";
-
-    if (input.includes("hello") || input.includes("hi")) {
-      response = "Hello! How can I help you today?";
-    } else if (input.includes("your name") || input.includes("who are you") || input.includes("you")) {
-      response = "I'm Speranza's friendly chatbot assistant!";
-    } else if (input.includes("projects") || input.includes("project work")) {
-      response = "You can check out Speranza's projects in the Projects section above!";
-    } else if (input.includes("contact") || input.includes("email") || input.includes("reach")) {
-      response = "You can reach Speranza at speranzadeejoemini@gmail.com or via her LinkedIn profile.";
-    } else if (input.includes("skills") || input.includes("services")) {
-      response = "Speranza is skilled in Python, Data Science, Machine Learning, and Fullstack Web Development.";
-    } else if (input.includes("experience") || input.includes("work")) {
-      response = "You can explore Speranza's work experience in the Experience section.";
-    } else if (input.includes("education") || input.includes("degree") || input.includes("qualification")) {
-      response = "Speranza holds a strong academic background in data and computer science. You can find more in the About Me section.";
-    } else if (input.includes("portfolio") || input.includes("website") || input.includes("home")) {
-      response = "You're already on the portfolio site. Use the menu above to explore various sections!";
-    } else if (input.includes("hire") || input.includes("available") || input.includes("job")) {
-      response = "Speranza is open to exciting opportunities! Feel free to connect via email or LinkedIn.";
-    } else if (input.includes("linkedin") || input.includes("github") || input.includes("social")) {
-      response = "Check the top contact section for Speranza’s LinkedIn and GitHub links.";
-    } else if (input.includes("thanks") || input.includes("thank you")) {
-      response = "You're welcome! Let me know if you have more questions.";
-    } else if (input.includes("help") || input.includes("assist")) {
-      response = "Sure! You can ask about projects, skills, experience, contact info, or anything else about Speranza.";
+    function showInitialQuestion() {
+      options.innerHTML = "";
+      addMessage("bot", "Hi, I'm Mini! How can I assist you?");
+      questionOptions.forEach(option => {
+        const btn = document.createElement("div");
+        btn.className = "chat-option";
+        btn.innerText = option;
+        btn.onclick = () => handleUserSelection(option);
+        options.appendChild(btn);
+      });
     }
 
-    setTimeout(() => addMessage("bot", response), 500);
-  }
-</script>
+    function handleUserSelection(selection) {
+      addMessage("user", selection);
+      let response;
 
+      switch (selection) {
+        case "About Me":
+          response = "You can find more details in the About Me section.";
+          break;
+        case "Skills & Services":
+          response = "Speranza is skilled in Python, Data Science, and Full-Stack Development.";
+          break;
+        case "Projects":
+          response = "Visit the Projects section to see some of Speranza's best work.";
+          break;
+        case "Experience":
+          response = "Explore Speranza's work experience in the Experience section.";
+          break;
+        case "Education":
+          response = "Speranza has a strong academic foundation in data and computer science.";
+          break;
+        case "Contact Info":
+          response = "You can reach her via email at speranzadeejoemini@gmail.com.";
+          break;
+        case "LinkedIn & GitHub":
+          response = "LinkedIn: linkedin.com/in/speranza-deejoe-a6b467222\nGitHub: github.com/speranzadeejoe";
+          break;
+        case "Job Opportunities":
+          response = "Speranza is actively seeking exciting job opportunities!";
+          break;
+        case "Thanks":
+          response = "You're welcome! Let me know if there's anything else.";
+          break;
+        default:
+          response = "Please choose a valid option from the list.";
+      }
+
+      setTimeout(() => addMessage("bot", response), 400);
+    }
+  </script>
 </body>
 </html>
+
+
+
