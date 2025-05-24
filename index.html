@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Speranza Deejoe | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <style>
-    /* Chatbot toggle button */
+    /* Chatbot Toggle Button */
     #chatbot-toggle {
       position: fixed;
       bottom: 20px;
@@ -25,13 +26,14 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    /* Chatbot container */
+    /* Chatbot Container */
     #chatbot-container {
       position: fixed;
       bottom: 90px;
       right: 20px;
-      width: 300px;
-      max-height: 500px;
+      width: 90%;
+      max-width: 320px;
+      max-height: 70vh;
       background: white;
       border: 1px solid #ccc;
       border-radius: 12px;
@@ -65,24 +67,19 @@
       gap: 5px;
     }
 
-   .chat-option {
-  background: #4a90e2; /* brighter background */
-  color: white;         /* high contrast text */
-  border: none;         /* cleaner look */
-  border-radius: 16px;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  transition: background 0.3s;
-}
-
-.chat-option:hover {
-  background: #357ABD;  /* darker shade on hover */
-}
-
+    .chat-option {
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 16px;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: background 0.3s;
+    }
 
     .chat-option:hover {
-      background: #d0e4ff;
+      background: #357ABD;
     }
 
     .user-msg {
@@ -96,10 +93,63 @@
       color: #4a90e2;
       margin-bottom: 5px;
     }
+
+    /* Responsive Hero */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 2rem;
+    }
+
+    .content h2 {
+      font-size: 1rem;
+    }
+
+    .floating-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .floating-icons img {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Responsive Navigation */
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      padding: 10px;
+    }
+
+    .navbar nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    @media (min-width: 600px) {
+      .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
+  <!-- Navigation -->
   <header class="navbar">
     <div class="logo">Speranza Deejoe</div>
     <nav>
@@ -195,7 +245,6 @@
     function handleUserSelection(selection) {
       addMessage("user", selection);
       let response;
-
       switch (selection) {
         case "About Me":
           response = "You can find more details in the About Me section.";
@@ -233,6 +282,3 @@
   </script>
 </body>
 </html>
-
-
-
