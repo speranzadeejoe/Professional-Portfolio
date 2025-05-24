@@ -171,9 +171,3 @@ html {
   scroll-padding-top: 60px; /* Height of navbar */
 }
 
-/* Adjust padding and margin on your sections that are hidden */
-#experience,
-#skills&services {
-  padding-top: 60px;
-  margin-top: -60px;
-}
